@@ -1,0 +1,30 @@
+# Sample Authentication Failure Logs
+# These are anonymized, realistic examples for analysis purposes
+# ⚠️ Pattern alert: multiple failures from same IP = potential brute force
+
+2024-11-01 01:02:11 WARNING sshd: Failed password for invalid user admin from 192.168.1.105 port 54321 ssh2
+2024-11-01 01:02:14 WARNING sshd: Failed password for invalid user admin from 192.168.1.105 port 54322 ssh2
+2024-11-01 01:02:17 WARNING sshd: Failed password for invalid user root from 192.168.1.105 port 54323 ssh2
+2024-11-01 01:02:20 WARNING sshd: Failed password for invalid user root from 192.168.1.105 port 54324 ssh2
+2024-11-01 01:02:23 WARNING sshd: Failed password for invalid user ubuntu from 192.168.1.105 port 54325 ssh2
+2024-11-01 01:02:26 WARNING sshd: Failed password for invalid user ubuntu from 192.168.1.105 port 54326 ssh2
+# ⚠️ ALERT: 6 failures in 15 seconds from 192.168.1.105 — possible brute force attack
+
+2024-11-01 06:15:03 WARNING sudo: j.silva : authentication failure ; logname=j.silva uid=1001 tty=/dev/pts/0
+2024-11-01 06:15:09 WARNING sudo: j.silva : authentication failure ; logname=j.silva uid=1001 tty=/dev/pts/0
+2024-11-01 06:15:15 WARNING sudo: j.silva : 3 incorrect password attempts
+
+2024-11-01 08:44:01 ERROR pam_unix: authentication failure; logname= uid=0 euid=0 tty=ssh ruser= rhost=10.0.0.88
+2024-11-01 08:44:03 ERROR sshd: Failed password for root from 10.0.0.88 port 22 ssh2
+2024-11-01 08:44:07 ERROR sshd: Failed password for root from 10.0.0.88 port 22 ssh2
+2024-11-01 08:44:09 ERROR sshd: Failed password for root from 10.0.0.88 port 22 ssh2
+2024-11-01 08:44:11 ERROR sshd: Disconnecting invalid user root 10.0.0.88 port 22: Too many authentication failures
+
+2024-11-01 14:22:55 WARNING apache2: [error] mod_auth_basic: user m.andrade not found
+2024-11-01 14:23:01 WARNING apache2: [error] mod_auth_basic: user m.andrade: authentication failure
+2024-11-01 14:23:08 WARNING apache2: [error] mod_auth_basic: user m.andrade: authentication failure
+
+2024-11-01 23:58:44 ERROR sshd: Failed password for invalid user test from 203.0.113.42 port 12345 ssh2
+2024-11-01 23:58:46 ERROR sshd: Failed password for invalid user test from 203.0.113.42 port 12346 ssh2
+2024-11-01 23:58:48 ERROR sshd: Failed password for invalid user guest from 203.0.113.42 port 12347 ssh2
+# ⚠️ ALERT: External IP 203.0.113.42 — scanning for default credentials

@@ -1,0 +1,25 @@
+# Sample System Error Logs
+# These are anonymized, realistic examples for analysis purposes
+
+2024-11-01 02:14:33 ERROR kernel: EXT4-fs error (device sda1): ext4_journal_check_start: Detected aborted journal
+2024-11-01 02:14:34 ERROR kernel: EXT4-fs (sda1): Remounting filesystem read-only
+2024-11-01 03:22:11 ERROR systemd: Failed to start MySQL Database Server
+2024-11-01 03:22:11 ERROR mysqld: Can't open the mysql.plugin table. Please run mysql_upgrade to create it
+2024-11-01 03:22:12 ERROR systemd: mysql.service: Main process exited, code=exited, status=1/FAILURE
+2024-11-01 03:22:12 ERROR systemd: mysql.service: Failed with result 'exit-code'
+2024-11-01 07:45:03 ERROR kernel: Out of memory: Kill process 4821 (java) score 892 or sacrifice child
+2024-11-01 07:45:03 ERROR kernel: Killed process 4821 (java) total-vm:4096000kB, anon-rss:3890000kB
+2024-11-01 08:01:55 WARNING systemd: nginx.service: Main process exited unexpectedly
+2024-11-01 08:01:56 ERROR systemd: nginx.service: Failed with result 'core-dump'
+2024-11-01 09:30:12 ERROR cron: (root) CMD (/usr/lib/cron/run-crons): Permission denied
+2024-11-01 09:30:12 ERROR cron: (CRON) error (can't fork)
+2024-11-01 11:15:44 ERROR kernel: NFS: server storage01 not responding, timed out
+2024-11-01 11:15:45 ERROR kernel: NFS: server storage01 not responding, still trying
+2024-11-01 13:02:28 ERROR smartd: Device: /dev/sdb, 1 Currently unreadable (pending) sectors
+2024-11-01 13:02:29 WARNING smartd: Device: /dev/sdb, SMART Failure: disk may be about to fail
+2024-11-01 14:55:00 ERROR systemd: backup.service: Timeout waiting for response
+2024-11-01 14:55:01 ERROR systemd: backup.service: Killing process with SIGKILL
+2024-11-01 16:30:10 ERROR kernel: ACPI Error: AE_NOT_FOUND, While evaluating Sleep State [\_S1_]
+2024-11-01 18:44:22 ERROR auditd: dispatch err (pipe full) event lost
+2024-11-01 22:10:05 ERROR kernel: EXT4-fs error (device sda1): ext4_journal_check_start: Detected aborted journal
+2024-11-01 22:10:06 CRITICAL systemd: emergency.target reached — system may be unstable
